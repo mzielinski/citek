@@ -16,12 +16,12 @@ import javax.validation.Valid;
 @RequestMapping("/subscriber")
 public class SubscriberController {
 
-    @RequestMapping(value="/submit", method= RequestMethod.POST)
+    @RequestMapping(method= RequestMethod.POST)
     public String submitForm(@Valid Subscriber subscriber, BindingResult result, Model m) {
         if(result.hasErrors()) {
             return "SubscriberForm";
         }
-        m.addAttribute("message", "Successfully saved person: " + subscriber.toString());
+        m.addAttribute("message", "Successfully saved person: " + subscriber.getName());
         return "Done";
     }
 

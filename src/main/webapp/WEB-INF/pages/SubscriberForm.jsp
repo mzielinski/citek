@@ -60,7 +60,7 @@
 
     <h2>Subscribe to The Newsletter!</h2>
 
-    <form:form method="POST" commandName="subscriber" action="subscriber/submit">
+    <form:form method="POST" commandName="subscriber" action="subscriber">
         <label for="nameInput">Name: </label>
         <form:input path="name" id="nameInput"/>
         <form:errors path="name" cssClass="error"/>
