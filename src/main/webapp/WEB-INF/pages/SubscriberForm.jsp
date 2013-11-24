@@ -89,8 +89,9 @@
         <label for="genderOptions">Gender: </label>
         <form:select path="gender" id="genderOptions">
             <form:option value="">Select Gender</form:option>
-            <form:option value="MALE">Male</form:option>
-            <form:option value="FEMALE">Female</form:option>
+            <c:forEach items="${genders}" var="genders">
+                <form:option value="${genders}">${genders}</form:option>
+            </c:forEach>
         </form:select>
         <form:errors path="gender" cssClass="error"/>
         <br/>
