@@ -1,6 +1,8 @@
 package com.mzielinski.citek.model;
 
 import com.mzielinski.citek.enums.Gender;
+import com.mzielinski.citek.validator.Phone;
+import com.mzielinski.citek.validator.Year;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -24,14 +26,14 @@ public class Subscriber {
     @Min(13) @Max(110)
     private Integer age;
 
-    @Size(min=10)
+    @Phone
     private String phone;
 
     @NotNull
     private Gender gender;
 
     @DateTimeFormat(pattern="MM/dd/yyyy")
-    @NotNull @Past
+    @NotNull @Year(2010)
     private Date birthday;
 
     private Boolean receiveNewsletter;
