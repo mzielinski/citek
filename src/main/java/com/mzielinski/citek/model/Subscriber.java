@@ -32,8 +32,8 @@ public class Subscriber {
     @NotNull
     private Gender gender;
 
-    @DateTimeFormat(pattern="MM/dd/yyyy")
-    @NotNull @Year(2010)
+    @DateTimeFormat(pattern="dd/MM/yyyy")
+    @NotNull @Past @Year(1985)
     private Date birthday;
 
     private Boolean receiveNewsletter;

@@ -82,7 +82,7 @@
         <br/>
 
         <label for="birthdayInput">Birthday: </label>
-        <form:input path="birthday" id="birthdayInput" placeholder="MM/DD/YYYY"/>
+        <form:input path="birthday" id="birthdayInput" placeholder="DD/MM/YYYY"/>
         <form:errors path="birthday" cssClass="error"/>
         <br/>
 
