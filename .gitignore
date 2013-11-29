@@ -9,3 +9,7 @@
 *.iml
 .idea
 target
+
+build
+out
+.gradle
