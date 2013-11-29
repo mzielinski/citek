@@ -25,8 +25,7 @@ public class YearConstraintValidator implements ConstraintValidator<Year, Date> 
         }
         Calendar c = Calendar.getInstance();
         c.setTime(target);
-        int fieldYear = c.get(Calendar.YEAR);
-        return fieldYear == annotationYear;
+        return annotationYear == c.get(Calendar.YEAR);
     }
 
 }
