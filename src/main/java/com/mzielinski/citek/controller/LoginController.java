@@ -1,10 +1,11 @@
 package com.mzielinski.citek.controller;
 
-import java.security.Principal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.security.Principal;
 
 
 /**
@@ -20,7 +21,7 @@ public class LoginController {
     public String printWelcome(ModelMap model, Principal principal ) {
         String name = principal.getName();
         model.addAttribute("username", name);
-        model.addAttribute("message", "Spring Security Custom Form example");
+        model.addAttribute("message", "Spring Security - ROLE_USER");
         return "welcome";
     }
 
@@ -38,6 +39,11 @@ public class LoginController {
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logout(ModelMap model) {
         return "login";
+    }
+
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public String accessDenied(ModelMap model) {
+        return "403";
     }
 
 }
