@@ -7,11 +7,10 @@
                            http://www.springframework.org/schema/security
                            http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-    <security:http auto-config="true">
+    <!-- HTTP basic authentication in Spring Security -->
+    <security:http>
         <security:intercept-url pattern="/welcome*" access="ROLE_USER" />
-        <security:form-login login-page="/login" default-target-url="/welcome"
-                    authentication-failure-url="/loginfailed" />
-        <security:logout logout-success-url="/logout" />
+        <security:http-basic />
     </security:http>
 
     <security:authentication-manager>
