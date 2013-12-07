@@ -28,7 +28,7 @@ INSERT INTO users VALUES ('alex', 'newjersey', true);
 INSERT INTO users VALUES ('tim', 'illinois', true);
 
 INSERT INTO authorities VALUES ('david', 'ROLE_USER');
-INSERT INTO authorities VALUES ('=', 'ROLE_ADMIN');
+INSERT INTO authorities VALUES ('david', 'ROLE_ADMIN');
 INSERT INTO authorities VALUES ('alex', 'ROLE_USER');
 INSERT INTO authorities VALUES ('tim', 'ROLE_USER');
 
