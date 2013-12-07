@@ -2,7 +2,10 @@ apply plugin: "war"
 apply plugin: "jetty"
 
 repositories {
-    mavenCentral()
+    maven {
+        mavenCentral()
+        url "http://repo.springsource.org/snapshot"
+    }
 }
 
 dependencies {
@@ -13,6 +16,25 @@ dependencies {
     compile group: "org.hibernate", name: "hibernate-validator", version: "5.0.1.Final"
     compile group: "org.slf4j", name: "slf4j-api", version: "1.7.5"
     compile group: "org.slf4j", name: "slf4j-log4j12", version: "1.7.5"
+
+    compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
+    compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
+    compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
+    compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
+    compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
+
+    compile group: "org.springframework.security", name: "spring-security-javaconfig", version: "1.0.0.CI-SNAPSHOT"
+    compile group: "org.springframework.security", name: "spring-security-acl", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-aspects", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-cas", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-config", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-core", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-crypto", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-ldap", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-openid", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-remoting", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-taglibs", version: "${springSecurityVersion}"
+    compile group: "org.springframework.security", name: "spring-security-web", version: "${springSecurityVersion}"
 
     runtime group: "javax.servlet", name: "jstl", version: "1.2"
 
