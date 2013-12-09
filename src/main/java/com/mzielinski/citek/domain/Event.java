@@ -1,14 +1,29 @@
 package com.mzielinski.citek.domain;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
-/**
- * @author mzielinski, Rule Financial
- */
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name = "EVENTS")
 public class Event {
 
+    @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Long id;
+
     private String title;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "EVENT_DATE")
     private Date date;
 
     public Event() {
@@ -43,4 +58,5 @@ public class Event {
     public void setTitle(String title) {
         this.title = title;
     }
+
 }

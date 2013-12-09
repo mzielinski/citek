@@ -28,7 +28,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping resource="com/mzielinski/citek/domain/Event.hbm.xml"/>
+        <mapping class="com.mzielinski.citek.domain.Event"/>
 
     </session-factory>
 
