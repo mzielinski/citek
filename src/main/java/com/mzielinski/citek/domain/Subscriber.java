@@ -1,4 +1,4 @@
-package com.mzielinski.citek.model;
+package com.mzielinski.citek.domain;
 
 import com.mzielinski.citek.enums.Gender;
 import com.mzielinski.citek.validator.Phone;

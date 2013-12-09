@@ -1,4 +1,4 @@
-package com.mzielinski.citek.model;
+package com.mzielinski.citek.domain;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;

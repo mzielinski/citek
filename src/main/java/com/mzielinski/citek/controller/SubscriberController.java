@@ -1,7 +1,7 @@
 package com.mzielinski.citek.controller;
 
 import com.mzielinski.citek.enums.Gender;
-import com.mzielinski.citek.model.Subscriber;
+import com.mzielinski.citek.domain.Subscriber;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

@@ -1,6 +1,6 @@
 package com.mzielinski.citek.controller;
 
-import com.mzielinski.citek.model.Customer;
+import com.mzielinski.citek.domain.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;

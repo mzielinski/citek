@@ -6,17 +6,27 @@ repositories {
 }
 
 dependencies {
-    providedCompile group: "javax.servlet", name: "servlet-api", version: "2.5"
 
+    // mvc
     compile group: "org.springframework", name: "spring-webmvc", version: "${springVersion}"
     compile group: "javax.validation", name: "validation-api", version: "1.1.0.Final"
+
+    // hibernate
+    compile group: "org.hibernate", name: "hibernate-core", version: "4.2.7.SP1"
     compile group: "org.hibernate", name: "hibernate-validator", version: "5.0.1.Final"
+    compile group: "javassist", name: "javassist", version: "3.12.1.GA"
+
+    // servlets
+    providedCompile group: "javax.servlet", name: "servlet-api", version: "2.5"
+    runtime group: "javax.servlet", name: "jstl", version: "1.2"
+
+    // logging
     compile group: "org.slf4j", name: "slf4j-api", version: "1.7.5"
     compile group: "org.slf4j", name: "slf4j-log4j12", version: "1.7.5"
 
-    runtime group: "javax.servlet", name: "jstl", version: "1.2"
-
+    // testing
     testCompile group: "junit", name: "junit", version: "4.+"
+    testCompile group: "com.h2database", name: "h2", version: "1.2.145"
 }
 
 jettyRunWar.contextPath = ""

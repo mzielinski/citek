@@ -5,6 +5,10 @@
 *.war
 *.ear
 
+# gradle
+.gradle
+build
+
 # idea file
 *.iml
 .idea
