@@ -16,6 +16,7 @@ dependencies {
     compile group: "org.hibernate", name: "hibernate-entitymanager", version: "${hibernateVersion}"
     compile group: "org.hibernate", name: "hibernate-validator", version: "5.0.1.Final"
     compile group: "javassist", name: "javassist", version: "3.12.1.GA"
+    compile group: "com.h2database", name: "h2", version: "1.2.145"
 
     // servlets
     providedCompile group: "javax.servlet", name: "servlet-api", version: "2.5"
@@ -27,7 +28,7 @@ dependencies {
 
     // testing
     testCompile group: "junit", name: "junit", version: "4.+"
-    testCompile group: "com.h2database", name: "h2", version: "1.2.145"
+
 }
 
 jettyRunWar.contextPath = ""

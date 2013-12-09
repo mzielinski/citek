@@ -1,13 +1,9 @@
 package com.mzielinski.citek.domain;
 
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,6 +21,9 @@ public class Event {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "EVENT_DATE")
     private Date date;
+
+    @ManyToMany
+    private Set<Person> participants = new HashSet<Person>();
 
     public Event() {
         // this form used by Hibernate
@@ -57,6 +56,14 @@ public class Event {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Set<Person> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(Set<Person> participants) {
+        this.participants = participants;
     }
 
 }

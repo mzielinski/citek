@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Steve Ebersole
  */
-public class EventTest {
+public class EventJPATest {
 
     private EntityManagerFactory entityManagerFactory;
 
